@@ -1,3 +1,10 @@
+## [3.1.3](https://github.com/Draggable/formeo-languages/compare/v3.1.2...v3.1.3) (2024-10-30)
+
+
+### Bug Fixes
+
+* es module output config ([1f22b1d](https://github.com/Draggable/formeo-languages/commit/1f22b1d))
+
 ## [3.1.2](https://github.com/Draggable/formeo-languages/compare/v3.1.1...v3.1.2) (2024-10-30)
 
 
