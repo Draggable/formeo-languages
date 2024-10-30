@@ -7,7 +7,7 @@ import { languageFileMap } from './src/js/index.js'
 
 export default defineConfig({
   root: 'src',
-  base: process.env.NODE_ENV === 'production' ? '/formeo-i18n/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/formeo-languages/' : '/',
   build: {
     rollupOptions: {
       input: {

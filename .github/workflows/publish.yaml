@@ -32,7 +32,7 @@ jobs:
       - name: Build
         if: success()
         run: npm run build
-      - name: Deploy - https://draggable.github.io/formeo-i18n/
+      - name: Deploy - https://draggable.github.io/formeo-languages/
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
