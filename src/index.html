@@ -16,11 +16,7 @@
     <header id="demo-header">
       <div class="lang-select">
         <label for="lang-select">Language</label>
-        <select name="lang-select" id="lang-select" class="form-control">
-          <% langFiles.forEach(function(langFile) { %>
-            <option value="<%- langFile.locale %>" dir="<%- langFile.dir %>"><%- langFile.nativeName %></option>
-            <% }); %>
-        </select>
+        <select name="lang-select" id="lang-select" class="form-control"></select>
       </div>
     </header>
     <section id="main_content">

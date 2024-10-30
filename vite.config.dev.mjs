@@ -3,7 +3,6 @@ import { resolve } from 'path'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 import { createHtmlPlugin } from 'vite-plugin-html'
 import pkg from './package.json'
-import { languageFileOptions } from './src/js/index.js'
 
 export default defineConfig({
   root: 'src',
@@ -16,13 +15,12 @@ export default defineConfig({
       output: {
         entryFileNames: '[name].min.js',
         chunkFileNames: '[name].min.js',
-        manualChunks: {
-          'main': ['./src/js/index.js'],
-        },
+        // manualChunks: {
+        //   'main': ['./src/js/index.js'],
+        // },
       },
     },
     outDir: '../dist',
-    emptyOutDir: true,
     minify: 'terser',
     terserOptions: {
       compress: {
@@ -39,7 +37,6 @@ export default defineConfig({
       filename: 'index.html',
       inject: {
         data: {
-          langFiles: languageFileOptions,
           version: pkg.version,
         },
       },
@@ -53,4 +50,15 @@ export default defineConfig({
       ],
     }),
   ],
+  resolve: {
+    alias: {
+      '@draggable/formeo-languages': resolve(__dirname, 'src/js/index.js'),
+    },
+  },
+  server: {
+    open: true,
+    fs: {
+      strict: false,
+    },
+  },
 })

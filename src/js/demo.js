@@ -1,8 +1,16 @@
 import '../scss/demo.scss'
-import { languageFileMap } from './index.js'
+import { languageFileMap, languageFileOptions } from '@draggable/formeo-languages'
 
 const langSelect = document.getElementById('lang-select')
 const activeLangTable = document.getElementById('active-lang')
+
+languageFileOptions.forEach(({ locale, nativeName }) => {
+  const option = document.createElement('option')
+  option.setAttribute('data-dir', languageFileMap[locale].dir)
+  option.value = locale
+  option.textContent = nativeName
+  langSelect.append(option)
+})
 
 const makeRow = (key, value) => {
   const row = document.createElement('tr')
