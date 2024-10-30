@@ -4,17 +4,22 @@
   "description": "Language files for Formeo",
   "main": "dist/main.min.js",
   "sideEffects": false,
+  "type": "module",
   "files": [
     "dist/**/*"
   ],
   "scripts": {
-    "lint": "eslint src/ --ext .js || true",
     "generate:index": "node tools/generate-index.js",
-    "build": "yarn generate:index && webpack --production",
+    "build": "vite build",
+    "dev": "vite",
+    "predev": "npm run generate:index",
     "semantic-release": "semantic-release --ci --debug",
-    "test": "jest src/",
-    "travis-deploy-once": "travis-deploy-once --pro",
-    "translate": "node tools/translate.js"
+    "test": "node --test src/js/*.test.js",
+    "translate": "node tools/translate.js",
+    "lint": "biome lint index.js",
+    "format": "biome check --apply index.js",
+    "prepare": "lefthook install",
+    "postmerge": "lefthook install"
   },
   "repository": {
     "type": "git",
@@ -36,98 +41,19 @@
     "url": "https://github.com/Draggable/formeo-i18n/issues"
   },
   "homepage": "https://github.com/Draggable/formeo-i18n#readme",
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "*",
-    "@babel/preset-env": "*",
-    "@google-cloud/translate": "^2.1.2",
-    "@semantic-release/changelog": "^3.0.1",
-    "@semantic-release/git": "^7.0.5",
-    "@semantic-release/npm": "^5.1.1",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "*",
-    "babel-loader": "^8.0.4",
-    "copy-webpack-plugin": "^4.6.0",
-    "eslint": "^5.9.0",
-    "eslint-config-google": "^0.11.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-jest": "^22.0.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "husky": "^1.1.4",
-    "jest": "^23.6.0",
-    "lint-staged": "^8.0.4",
-    "lodash": "^4.17.11",
-    "mi18n": "^0.4.8",
-    "prettier": "^1.15.2",
-    "semantic-release": "^15.12.0",
-    "travis-deploy-once": "^5.0.9",
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2"
-  },
-  "engines": {
-    "node": ">=10"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "esmodules": true
-          }
-        }
-      ]
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "printWidth": 120,
-    "semi": false
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --config package.json --write",
-      "git add"
-    ]
-  },
-  "eslintConfig": {
-    "plugins": [
-      "jest",
-      "prettier"
-    ],
-    "extends": [
-      "eslint:recommended",
-      "plugin:jest/recommended",
-      "google",
-      "prettier"
-    ],
-    "env": {
-      "es6": true,
-      "node": true,
-      "jest/globals": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 9,
-      "sourceType": "module"
-    },
-    "rules": {
-      "prefer-const": 1,
-      "quote-props": 0,
-      "no-unused-vars": 1,
-      "no-console": 0,
-      "new-cap": 0,
-      "strict": 0,
-      "arrow-parens": 0,
-      "no-underscore-dangle": 0,
-      "comma-dangle": 0,
-      "no-use-before-define": 0,
-      "eol-last": 0,
-      "require-jsdoc": 1
-    }
-  },
-  "jest": {
-    "testRegex": "./.*\\.spec\\.js$"
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@google-cloud/translate": "^8.5.0",
+    "@semantic-release/changelog": "^3.0.6",
+    "@semantic-release/git": "^7.0.18",
+    "@semantic-release/npm": "^5.3.5",
+    "lefthook": "^1.8.2",
+    "sass-embedded": "^1.80.5",
+    "semantic-release": "^15.14.0",
+    "vite": "^5.4.10",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-static-copy": "^2.0.0"
   },
   "release": {
     "branch": "master",
@@ -142,9 +68,31 @@
       "@semantic-release/git"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        2,
+        "always",
+        [
+          "build",
+          "chore",
+          "ci",
+          "docs",
+          "feat",
+          "fix",
+          "perf",
+          "refactor",
+          "revert",
+          "style",
+          "test"
+        ]
+      ]
     }
+  },
+  "dependencies": {
+    "mi18n": "^1.0.3"
   }
 }

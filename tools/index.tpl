@@ -1,6 +1,7 @@
 /**
- * Array of processed languages files.
+ * Processed languages files.
  */
-export const languageFiles = <%= languageFiles %>
+ export const languageFileMap = <%= languageFileMap %>
+ export const languageFiles = <%= languageFiles %>
 
 <%= langs %>
