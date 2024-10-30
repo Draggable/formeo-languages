@@ -1,5 +1,5 @@
 {
-  "name": "formeo-i18n",
+  "name": "@draggable/formeo-languages",
   "version": "2.1.3",
   "description": "Language files for Formeo",
   "main": "dist/main.min.js",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Draggable/formeo-i18n.git"
+    "url": "https://github.com/Draggable/formeo-languages.git"
   },
   "keywords": [
     "formeo",
@@ -39,9 +39,9 @@
     "node_modules"
   ],
   "bugs": {
-    "url": "https://github.com/Draggable/formeo-i18n/issues"
+    "url": "https://github.com/Draggable/formeo-languages/issues"
   },
-  "homepage": "https://github.com/Draggable/formeo-i18n#readme",
+  "homepage": "https://github.com/Draggable/formeo-languages#readme",
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
