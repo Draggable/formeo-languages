@@ -3,7 +3,7 @@ import { resolve } from 'path'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 import { createHtmlPlugin } from 'vite-plugin-html'
 import pkg from './package.json'
-import { languageFileMap } from './src/js/index.js'
+import { languageFileOptions } from './src/js/index.js'
 
 export default defineConfig({
   root: 'src',
@@ -39,13 +39,7 @@ export default defineConfig({
       filename: 'index.html',
       inject: {
         data: {
-          langFiles: Object.entries(languageFileMap).map(([locale, lang]) => {
-            return {
-              locale: locale,
-              dir: lang.dir,
-              nativeName: lang[locale],
-            }
-          }),
+          langFiles: languageFileOptions,
           version: pkg.version,
         },
       },
