@@ -13,6 +13,7 @@
     "build": "vite build",
     "dev": "vite",
     "predev": "npm run generate:index",
+    "prebuild": "npm run generate:index",
     "semantic-release": "semantic-release --ci --debug",
     "test": "node --test src/js/*.test.js",
     "translate": "node tools/translate.js",
