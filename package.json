@@ -8,6 +8,9 @@
   "files": [
     "dist/**/*"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "generate:index": "node tools/generate-index.js",
     "build": "vite build",
