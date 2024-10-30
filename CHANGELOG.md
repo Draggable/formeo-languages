@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/Draggable/formeo-languages/compare/v3.0.0...v3.0.1) (2024-10-30)
+
+
+### Bug Fixes
+
+* readme ([736b35e](https://github.com/Draggable/formeo-languages/commit/736b35e))
+
 # [3.0.0](https://github.com/Draggable/formeo-languages/compare/v2.1.3...v3.0.0) (2024-10-30)
 
 
