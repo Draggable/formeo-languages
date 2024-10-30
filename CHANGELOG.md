@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/Draggable/formeo-languages/compare/v3.0.2...v3.1.0) (2024-10-30)
+
+
+### Features
+
+* add lamguage file options ([4f82dbc](https://github.com/Draggable/formeo-languages/commit/4f82dbc))
+
 ## [3.0.2](https://github.com/Draggable/formeo-languages/compare/v3.0.1...v3.0.2) (2024-10-30)
 
 
