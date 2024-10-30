@@ -2,7 +2,7 @@
   "name": "@draggable/formeo-languages",
   "version": "3.1.1",
   "description": "Language files for Formeo",
-  "main": "dist/main.min.js",
+  "main": "dist/formeo-languages.umd.js",
   "sideEffects": false,
   "type": "module",
   "files": [
