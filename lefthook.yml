@@ -1,4 +1,4 @@
 commit-msg:
   commands:
     commitlint:
-      run: npx commitlint --edit $1
+      run: npx commitlint --edit $GIT_PARAMS
