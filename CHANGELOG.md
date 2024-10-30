@@ -1,3 +1,21 @@
+# [3.0.0](https://github.com/Draggable/formeo-languages/compare/v2.1.3...v3.0.0) (2024-10-30)
+
+
+### Bug Fixes
+
+* language build and demo ([295d6f5](https://github.com/Draggable/formeo-languages/commit/295d6f5))
+* lint command ([86dfcef](https://github.com/Draggable/formeo-languages/commit/86dfcef))
+
+
+### Features
+
+* add json files ([5caf38f](https://github.com/Draggable/formeo-languages/commit/5caf38f))
+
+
+### BREAKING CHANGES
+
+* changes to build output
+
 ## [2.1.3](https://github.com/Draggable/formeo-languages/compare/v2.1.2...v2.1.3) (2018-12-12)
 
 
