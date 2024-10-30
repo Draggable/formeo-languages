@@ -17,19 +17,22 @@ const tmpl = readFileSync(iconTemplatePath).toString()
 const compiled = template(tmpl)
 
 // Process language files
-const [languageFiles, languageFileMap] = readdirSync(langDir)
+const [languageFiles, languageFileMap, languageFileOptions] = readdirSync(langDir)
   .filter(file => /.lang$/.test(file))
   .reduce(
     (acc, lang) => {
-      const [langFileArray, langFileMap] = acc
+      const [langFileArray, langFileMap, langFileOptions] = acc
       const langFile = readFileSync(`${langDir}/${lang}`).toString()
       const fileName = basename(lang)
       const locale = fileName.slice(0, fileName.indexOf('.'))
       langFileMap[locale] = I18N.processFile(langFile)
       langFileArray.push(`languageFileMap['${locale}']`)
+      langFileOptions.push(
+        `{ locale: '${locale}', dir: '${langFileMap[locale].dir}', nativeName: '${langFileMap[locale][locale]}' }`,
+      )
       return acc
     },
-    [[], {}],
+    [[], {}, []],
   )
 
 // Generate exports
@@ -40,7 +43,12 @@ const langs = Object.keys(languageFileMap)
 // Write output file
 writeFileSync(
   generatedIndexPath,
-  compiled({ languageFiles: `[${languageFiles}]`, languageFileMap: JSON.stringify(languageFileMap), langs }),
+  compiled({
+    languageFiles: `[${languageFiles}]`,
+    languageFileMap: JSON.stringify(languageFileMap),
+    langs,
+    languageFileOptions: `[${languageFileOptions}]`,
+  }),
 )
 
 // generate json files too so github pages can be used like an api
