@@ -1,25 +1,52 @@
-const { readdirSync, readFileSync, writeFileSync } = require('fs')
-const { resolve, basename } = require('path')
-const template = require('lodash/template')
-const langDir = resolve(__dirname, '../src', 'lang')
+import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { resolve, basename } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { I18N } from 'mi18n'
+import template from 'lodash/template.js'
 
-const iconWritePath = resolve(__dirname, '../src/js/index.js')
+// Get __dirname equivalent in ES modules
+const __dirname = fileURLToPath(new URL('.', import.meta.url))
+
+// Path configurations
+const langDir = resolve(__dirname, '../src', 'lang')
+const generatedIndexPath = resolve(__dirname, '../src/js/index.js')
 const iconTemplatePath = resolve(__dirname, './index.tpl')
+
+// Read and compile template
 const tmpl = readFileSync(iconTemplatePath).toString()
 const compiled = template(tmpl)
 
-const languageFiles = readdirSync(langDir)
+// Process language files
+const [languageFiles, languageFileMap] = readdirSync(langDir)
   .filter(file => /.lang$/.test(file))
-  .reduce((acc, lang) => {
-    const langFile = readFileSync(`${langDir}/${lang}`).toString()
-    const fileName = basename(lang)
-    const locale = fileName.substr(0, fileName.indexOf('.'))
-    acc[locale] = langFile
-    return acc
-  }, {})
+  .reduce(
+    (acc, lang) => {
+      const [langFileArray, langFileMap] = acc
+      const langFile = readFileSync(`${langDir}/${lang}`).toString()
+      const fileName = basename(lang)
+      const locale = fileName.slice(0, fileName.indexOf('.'))
+      langFileMap[locale] = I18N.processFile(langFile)
+      langFileArray.push(`languageFileMap['${locale}']`)
+      return acc
+    },
+    [[], {}],
+  )
 
-const langs = Object.keys(languageFiles)
-  .map(key => `export const ${key.replace('-', '')} = languageFiles['${key}']`)
+// Generate exports
+const langs = Object.keys(languageFileMap)
+  .map(key => `export const ${key.replace('-', '')} = languageFileMap['${key}']`)
   .join('\n')
 
-writeFileSync(iconWritePath, compiled({ languageFiles: JSON.stringify(languageFiles), langs }))
+// Write output file
+writeFileSync(
+  generatedIndexPath,
+  compiled({ languageFiles: `[${languageFiles}]`, languageFileMap: JSON.stringify(languageFileMap), langs }),
+)
+
+// Object.entries(languageFileMap).forEach(([locale, lang]) => {
+//   writeFileSync(
+//     generatedIndexPath,
+//     compiled({ languageFiles: `[${languageFiles}]`, languageFileMap: JSON.stringify(languageFileMap), langs }),
+//   )
+//   console.log(`Generated ${file}`)
+// })

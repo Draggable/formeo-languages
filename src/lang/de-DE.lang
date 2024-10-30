@@ -1,5 +1,6 @@
-en-US = Englisch
 de-DE = Deutsch
+
+en-US = Englisch
 dir = ltr
 
 action.add.attrs.attr = Welches Attribut möchten Sie hinzufügen?
