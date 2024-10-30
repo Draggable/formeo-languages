@@ -43,10 +43,9 @@ writeFileSync(
   compiled({ languageFiles: `[${languageFiles}]`, languageFileMap: JSON.stringify(languageFileMap), langs }),
 )
 
-// Object.entries(languageFileMap).forEach(([locale, lang]) => {
-//   writeFileSync(
-//     generatedIndexPath,
-//     compiled({ languageFiles: `[${languageFiles}]`, languageFileMap: JSON.stringify(languageFileMap), langs }),
-//   )
-//   console.log(`Generated ${file}`)
-// })
+// generate json files too so github pages can be used like an api
+Object.entries(languageFileMap).forEach(([locale, lang]) => {
+  const filename = `${locale}.json`
+  writeFileSync(`${langDir}/${filename}`, JSON.stringify(lang))
+  console.log(`Generated ${filename}`)
+})

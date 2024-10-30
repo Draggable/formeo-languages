@@ -29,9 +29,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
-      - name: Deploy - https://draggable.github.io/formeo-i18n/
+      - name: Build
         if: success()
+        run: npm run build
+      - name: Deploy - https://draggable.github.io/formeo-i18n/
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./dist/demo
+          publish_dir: ./dist
