@@ -1,3 +1,13 @@
+## [3.0.2](https://github.com/Draggable/formeo-languages/compare/v3.0.1...v3.0.2) (2024-10-30)
+
+
+### Bug Fixes
+
+* commitlint preventing release ([7d8c44d](https://github.com/Draggable/formeo-languages/commit/7d8c44d))
+* commitlint preventing release ([6d7ce3f](https://github.com/Draggable/formeo-languages/commit/6d7ce3f))
+* json files not copied to dist ([9e26bd0](https://github.com/Draggable/formeo-languages/commit/9e26bd0))
+* lefthook preventing release ([d4ed1d5](https://github.com/Draggable/formeo-languages/commit/d4ed1d5))
+
 ## [3.0.1](https://github.com/Draggable/formeo-languages/compare/v3.0.0...v3.0.1) (2024-10-30)
 
 
