@@ -32,6 +32,7 @@
     "semantic-release": "semantic-release --ci --debug",
     "test": "node --test src/js/*.test.js",
     "translate": "node tools/translate.js",
+    "pretranslate": "npm run build:lib",
     "lint": "biome lint src/js/demo.js",
     "format": "biome check --apply index.js",
     "prepare": "lefthook install",
