@@ -1,4 +1,5 @@
 commit-msg:
-  scripts:
-    "commitlint.sh":
-      runner: bash
+  commands:
+    commitlint:
+      run: npx commitlint --edit $GIT_PARAMS
+      skip: CI == 'true'
