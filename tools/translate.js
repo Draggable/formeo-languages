@@ -38,8 +38,11 @@ const getNativeLanguageName = (srcLocale, targetLocale = srcLocale) => {
 toLocales.forEach(async toLocale => {
   const fromLang = languageFileMap[fromLocale]
   const toLang = languageFileMap[toLocale] || {}
-  const allLocales = [fromLocale, ...toLocales].reduce((acc, locale) => {
+  const otherLocales = getDefaultToLocale(fromLocale)
+  const allLocaleNames = [fromLocale, ...otherLocales].reduce((acc, locale) => {
+    const langCode = locale.split('-')[0]
     acc[locale] = getNativeLanguageName(toLocale, locale)
+    acc[`lang.${langCode}`] = getNativeLanguageName(toLocale, langCode)
     return acc
   }, {})
 
@@ -58,7 +61,7 @@ toLocales.forEach(async toLocale => {
 
       return acc
     },
-    { translated: allLocales, unTranslated: {} },
+    { translated: allLocaleNames, unTranslated: {} },
   )
 
   // Google translation API has a limit of 128 items
