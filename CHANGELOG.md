@@ -1,3 +1,20 @@
+# [3.2.0](https://github.com/Draggable/formeo-languages/compare/v3.1.3...v3.2.0) (2024-11-12)
+
+
+### Bug Fixes
+
+* commitlint config ([298c6a5](https://github.com/Draggable/formeo-languages/commit/298c6a5))
+* lefthook for local only ([dc52e9b](https://github.com/Draggable/formeo-languages/commit/dc52e9b))
+* lefthook for local only ([3f86104](https://github.com/Draggable/formeo-languages/commit/3f86104))
+* lefthook for local only ([8b9464f](https://github.com/Draggable/formeo-languages/commit/8b9464f))
+
+
+### Features
+
+* add he-IL and hi-IN ([c246fc0](https://github.com/Draggable/formeo-languages/commit/c246fc0))
+* add hindi ([d67fd5d](https://github.com/Draggable/formeo-languages/commit/d67fd5d))
+* translate and format all languages ([530cab7](https://github.com/Draggable/formeo-languages/commit/530cab7))
+
 ## [3.1.3](https://github.com/Draggable/formeo-languages/compare/v3.1.2...v3.1.3) (2024-10-30)
 
 
