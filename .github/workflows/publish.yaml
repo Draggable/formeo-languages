@@ -27,6 +27,8 @@ jobs:
       - name: Build
         run: npm run build
       - name: Publish
+        env:
+          CI: true
         if: success()
         run: npx semantic-release
       - name: Build
