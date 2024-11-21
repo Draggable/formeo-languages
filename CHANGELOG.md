@@ -1,3 +1,12 @@
+# [3.3.0](https://github.com/Draggable/formeo-languages/compare/v3.2.0...v3.3.0) (2024-11-21)
+
+
+### Features
+
+* add isChecked field property ([d717495](https://github.com/Draggable/formeo-languages/commit/d717495))
+* add isChecked field property ([a6526dd](https://github.com/Draggable/formeo-languages/commit/a6526dd))
+* translate isChecked ([68088e2](https://github.com/Draggable/formeo-languages/commit/68088e2))
+
 # [3.2.0](https://github.com/Draggable/formeo-languages/compare/v3.1.3...v3.2.0) (2024-11-12)
 
 
