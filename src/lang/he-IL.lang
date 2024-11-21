@@ -93,6 +93,7 @@ editing.row = שורת עריכה
 editorTitle = רכיבי טופס
 field = שָׂדֶה
 field.property.invalid = לא תקף
+field.property.isChecked = נבדק
 field.property.isNotVisible = אינו נראה לעין
 field.property.isVisible = גלוי
 field.property.label = מַדבֵּקָה
