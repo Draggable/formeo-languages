@@ -91,6 +91,7 @@ editing.row = Editing Row
 editorTitle = Form Elements
 field = Field
 field.property.invalid = not valid
+field.property.isChecked = is checked
 field.property.isNotVisible = is not visible
 field.property.isVisible = is visible
 field.property.label = label
