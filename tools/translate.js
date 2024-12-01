@@ -11,7 +11,7 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 // Command line arguments
 const getDefaultToLocale = fromLocale => Object.keys(languageFileMap).filter(locale => locale !== fromLocale)
-const [fromLocale, toLocaleArg = getDefaultToLocale(fromLocale)] = process.argv.slice(2)
+const [fromLocale = 'en-US', toLocaleArg = getDefaultToLocale(fromLocale)] = process.argv.slice(2)
 const toLocales = Array.isArray(toLocaleArg) ? toLocaleArg : [toLocaleArg]
 
 // Configuration
