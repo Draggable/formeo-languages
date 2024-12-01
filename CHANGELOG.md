@@ -1,3 +1,10 @@
+# [3.4.0](https://github.com/Draggable/formeo-languages/compare/v3.3.0...v3.4.0) (2024-12-01)
+
+
+### Features
+
+* add condition type labels ([43c6693](https://github.com/Draggable/formeo-languages/commit/43c6693))
+
 # [3.3.0](https://github.com/Draggable/formeo-languages/compare/v3.2.0...v3.3.0) (2024-11-21)
 
 
