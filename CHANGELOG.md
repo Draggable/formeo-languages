@@ -1,3 +1,10 @@
+# [3.5.0](https://github.com/Draggable/formeo-languages/compare/v3.4.1...v3.5.0) (2026-01-13)
+
+
+### Features
+
+* add cancel and configuration labels ([1b4ba56](https://github.com/Draggable/formeo-languages/commit/1b4ba56))
+
 ## [3.4.1](https://github.com/Draggable/formeo-languages/compare/v3.4.0...v3.4.1) (2024-12-01)
 
 
