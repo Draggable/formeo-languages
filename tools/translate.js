@@ -4,10 +4,14 @@ import path from 'node:path'
 import chunk from 'lodash/chunk.js'
 import googleTranslate from '@google-cloud/translate'
 import { languageFileMap } from '../src/js/index.js'
+import dotenv from 'dotenv'
 
 const { Translate } = googleTranslate.v2
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
+
+// Load environment variables
+dotenv.config()
 
 // Command line arguments
 const getDefaultToLocale = fromLocale => Object.keys(languageFileMap).filter(locale => locale !== fromLocale)
@@ -16,7 +20,7 @@ const toLocales = Array.isArray(toLocaleArg) ? toLocaleArg : [toLocaleArg]
 
 // Configuration
 const projectId = 'formeo-1344'
-const credentialsFile = path.resolve(__dirname, '../../', 'GOOGLE_APPLICATION_CREDENTIALS.json')
+const credentialsFile = process.env.GOOGLE_APPLICATION_CREDENTIALS_PATH || path.resolve(__dirname, '../../', 'GOOGLE_APPLICATION_CREDENTIALS.json')
 process.env.GOOGLE_APPLICATION_CREDENTIALS = credentialsFile
 
 // Initialize translation client

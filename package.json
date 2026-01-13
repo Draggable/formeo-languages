@@ -113,6 +113,6 @@
     }
   },
   "dependencies": {
-    "mi18n": "^1.0.3"
+    "@draggable/i18n": "^1.0.7"
   }
 }

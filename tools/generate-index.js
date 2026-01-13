@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve, basename } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { I18N } from 'mi18n'
+import { I18N } from '@draggable/i18n'
 import template from 'lodash/template.js'
 
 // Get __dirname equivalent in ES modules
