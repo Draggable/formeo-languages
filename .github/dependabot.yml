@@ -1,0 +1,33 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Toronto"
+    open-pull-requests-limit: 10
+    groups:
+      production-dependencies:
+        applies-to: "version-updates"
+        dependency-type: "production"
+        update-types:
+          - "minor"
+          - "patch"
+      development-dependencies:
+        applies-to: "version-updates"
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+      major-updates:
+        applies-to: "version-updates"
+        update-types:
+          - "major"
+    labels:
+      - "dependencies"
+      - "automated-pr"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
