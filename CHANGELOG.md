@@ -1,3 +1,12 @@
+## [3.5.1](https://github.com/Draggable/formeo-languages/compare/v3.5.0...v3.5.1) (2026-05-19)
+
+
+### Bug Fixes
+
+* **ci:** use Node 22 LTS for semantic-release compatibility ([#61](https://github.com/Draggable/formeo-languages/issues/61)) ([cc24186](https://github.com/Draggable/formeo-languages/commit/cc241865c4e5edceea6c670d8cb8f3b886300872))
+* known npm vulnerabilities ([2ec779f](https://github.com/Draggable/formeo-languages/commit/2ec779feaf81cc1128d1a1b82429f04f9b5aef4d))
+* lefthook commitlint ([301307c](https://github.com/Draggable/formeo-languages/commit/301307c02619b98f0ca7d80c28716524e5206bd1))
+
 # [3.5.0](https://github.com/Draggable/formeo-languages/compare/v3.4.1...v3.5.0) (2026-01-13)
 
 
