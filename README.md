@@ -1,6 +1,6 @@
 # Formeo I18N
 
-[![npm version](https://badge.fury.io/js/@draggable/formeo-languages.svg)](https://badge.fury.io/js/@draggable/formeo-languages)
+[![npm version](https://badge.fury.io/js/@draggable%2Fformeo-languages.svg)](https://badge.fury.io/js/@draggable%2Fformeo-languages)
 
 Language files for Formeo with variables for preprocessed files and list containing locale and native name.
 
