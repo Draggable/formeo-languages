@@ -1,7 +1,7 @@
 
 /**
 @draggable/formeo-languages - https://github.com/Draggable/formeo-languages#readme
-Version: 3.5.1
+Version: 3.6.0
 Author: Kevin Chappell <kevin.b.chappell@gmail.com> (https://kevin-chappell.com)
 */
 
