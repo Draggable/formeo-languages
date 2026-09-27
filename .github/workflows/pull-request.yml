@@ -4,12 +4,16 @@ name: Pull Request
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Oldest supported, current LTS, and the newest release (where API removals show up first)
+        node-version: [22, lts/*, current]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           cache: 'npm'
-          node-version: 23
+          node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         env:
           CI: true

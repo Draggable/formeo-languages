@@ -14,10 +14,12 @@ jobs:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          cache: 'npm'
+          # No dependency cache: this job holds publish tokens, and a cache written by
+          # another workflow run could otherwise inject code into the release
+          package-manager-cache: false
           node-version: 24
       - name: Install dependencies
         run: npm install
@@ -34,7 +36,7 @@ jobs:
         if: success()
         run: npm run build
       - name: Deploy - https://draggable.github.io/formeo-languages/
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ./dist

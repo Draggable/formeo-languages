@@ -31,3 +31,17 @@ updates:
     commit-message:
       prefix: "chore"
       include: "scope"
+
+  # Keeps the SHA-pinned actions (and their version comments) current via reviewable PRs
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Produces conventional commits like "ci(deps): bump ..." to match commitlint
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    groups:
+      actions:
+        patterns:
+          - "*"
