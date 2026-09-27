@@ -6,3 +6,7 @@ Language files for Formeo with variables for preprocessed files and list contain
 
 These are the language files for Formeo. If your language is missing feel free to open a PR to add it.
 
+## Contributing
+
+Translation fixes are always welcome, especially from native speakers. See [CONTRIBUTING.md](CONTRIBUTING.md) for how the language files work and how to improve them.
+
