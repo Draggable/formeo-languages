@@ -1,3 +1,10 @@
+# [3.6.0](https://github.com/Draggable/formeo-languages/compare/v3.5.1...v3.6.0) (2026-09-27)
+
+
+### Features
+
+* add editor page tab strings and translation workflow ([cf51444](https://github.com/Draggable/formeo-languages/commit/cf51444eac2f1a32d2ec1f25b74a2a8d599322e4))
+
 ## [3.5.1](https://github.com/Draggable/formeo-languages/compare/v3.5.0...v3.5.1) (2026-05-19)
 
 
