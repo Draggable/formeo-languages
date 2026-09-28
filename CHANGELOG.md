@@ -1,3 +1,16 @@
+# [3.8.0](https://github.com/Draggable/formeo-languages/compare/v3.7.0...v3.8.0) (2026-09-28)
+
+
+### Bug Fixes
+
+* correct the it-IT, tr-TR and es/pt wording of the new keys ([f8d3725](https://github.com/Draggable/formeo-languages/commit/f8d3725c51b005c6cae7c5ca6cb8ee06f252db73))
+* drop the stray spaces inside quotes around placeholders ([991e540](https://github.com/Draggable/formeo-languages/commit/991e540b4667b3095d225682003a4c14d75ef7e8))
+
+
+### Features
+
+* add reorderOption, attributeNameRequired, selectConfigKey and duplicateFieldName ([b46916b](https://github.com/Draggable/formeo-languages/commit/b46916b858adaa913294bdd910a968bbbddcc1c4))
+
 # [3.7.0](https://github.com/Draggable/formeo-languages/compare/v3.6.0...v3.7.0) (2026-09-28)
 
 
