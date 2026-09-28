@@ -1,3 +1,15 @@
+# [3.7.0](https://github.com/Draggable/formeo-languages/compare/v3.6.0...v3.7.0) (2026-09-28)
+
+
+### Bug Fixes
+
+* use each locale's existing word for page in pages.page ([d276257](https://github.com/Draggable/formeo-languages/commit/d276257f0594d7893242740ef5a69d3bbf79d441))
+
+
+### Features
+
+* add the page type label for condition targets ([b65a2e8](https://github.com/Draggable/formeo-languages/commit/b65a2e8d8763434f2990ced8c597fee6f8c00289)), closes [Draggable/formeo#122](https://github.com/Draggable/formeo/issues/122)
+
 # [3.6.0](https://github.com/Draggable/formeo-languages/compare/v3.5.1...v3.6.0) (2026-09-27)
 
 
