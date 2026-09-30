@@ -1,3 +1,10 @@
+# [3.9.0](https://github.com/Draggable/formeo-languages/compare/v3.8.0...v3.9.0) (2026-09-30)
+
+
+### Features
+
+* add other, config.other and config.otherLabel ([0582923](https://github.com/Draggable/formeo-languages/commit/05829233d9cfb80074d6e967c240c3c01713b957))
+
 # [3.8.0](https://github.com/Draggable/formeo-languages/compare/v3.7.0...v3.8.0) (2026-09-28)
 
 
