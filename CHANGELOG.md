@@ -1,3 +1,10 @@
+## [3.10.1](https://github.com/Draggable/formeo-languages/compare/v3.10.0...v3.10.1) (2026-10-06)
+
+
+### Bug Fixes
+
+* table caption, label position and row value translations ([e82891b](https://github.com/Draggable/formeo-languages/commit/e82891b3185b6f8ccb22a1af2143fe9262decf29))
+
 # [3.10.0](https://github.com/Draggable/formeo-languages/compare/v3.9.0...v3.10.0) (2026-10-06)
 
 
