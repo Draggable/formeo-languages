@@ -1,7 +1,7 @@
 
 /**
 @draggable/formeo-languages - https://github.com/Draggable/formeo-languages#readme
-Version: 3.10.0
+Version: 3.10.1
 Author: Kevin Chappell <kevin.b.chappell@gmail.com> (https://kevin-chappell.com)
 */
 
@@ -1120,7 +1120,7 @@ var e = {
 		success: "Erfolg",
 		"table.addColumn": "+ Spalte",
 		"table.addRow": "+ Zeile",
-		"table.caption": "Untertitel",
+		"table.caption": "Tabellenbeschriftung",
 		"table.cell": "Zeile {row}, Spalte {column}",
 		"table.cellInput": "{row}, {column}",
 		"table.columnInput": "Eingabe für Spalte {column}",
@@ -1688,7 +1688,7 @@ var e = {
 		success: "Éxito",
 		"table.addColumn": "+ Columna",
 		"table.addRow": "+ Fila",
-		"table.caption": "Subtítulo",
+		"table.caption": "Título de la tabla",
 		"table.cell": "Fila {row}, columna {column}",
 		"table.cellInput": "{row}, {column}",
 		"table.columnInput": "Columna {column} entrada",
@@ -2068,7 +2068,7 @@ var e = {
 		"condition.type.or": "Tai",
 		"condition.type.then": "Sitten",
 		"condition.value.placeholder": "arvo",
-		"config.labelPosition": "Tarran sijainti",
+		"config.labelPosition": "Tunnisteen sijainti",
 		"config.other": "Muu vaihtoehto",
 		"config.otherLabel": "Muun vaihtoehdon otsikko",
 		confirmClearAll: "Haluatko varmasti poistaa kaikki kentät?",
@@ -3425,7 +3425,7 @@ var e = {
 		"table.required": "Kötelező",
 		"table.rowHeaders": "Sorfejlécek",
 		"table.rowRequired": "{row} sor kötelező",
-		"table.rowValue": "{row} értéke",
+		"table.rowValue": "Sor {row} értéke",
 		"table.value": "Érték",
 		text: "Szövegmező",
 		then: "Azután",
@@ -4262,7 +4262,7 @@ var e = {
 		success: "Suksess",
 		"table.addColumn": "+ Kolonne",
 		"table.addRow": "+ Rad",
-		"table.caption": "Tekst",
+		"table.caption": "Tabelltittel",
 		"table.cell": "Rad {row}, kolonne {column}",
 		"table.cellInput": "{row}, {column}",
 		"table.columnInput": "Kolonne {column} inndata",
@@ -4834,7 +4834,7 @@ var e = {
 		success: "Sucesso",
 		"table.addColumn": "+ Coluna",
 		"table.addRow": "+ Linha",
-		"table.caption": "Rubrica",
+		"table.caption": "Legenda",
 		"table.cell": "Linha {row}, coluna {column}",
 		"table.cellInput": "{row}, {column}",
 		"table.columnInput": "Entrada da coluna {column}",
@@ -6264,7 +6264,7 @@ var e = {
 		success: "başarı",
 		"table.addColumn": "+ Sütun",
 		"table.addRow": "+ Satır",
-		"table.caption": "Altyazı",
+		"table.caption": "Tablo başlığı",
 		"table.cell": "Satır {row}, sütun {column}",
 		"table.cellInput": "{row}, {column}",
 		"table.columnInput": "Sütun {column} girişi",
