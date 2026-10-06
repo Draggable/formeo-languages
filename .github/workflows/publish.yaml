@@ -25,13 +25,14 @@ jobs:
         run: npm install
       - name: Test
         run: npm test
-      - name: Build
-        run: npm run build
+      # semantic-release builds in its prepare step, after bumping the version,
+      # so the bundle banner and the release assets carry the new version
       - name: Publish
         env:
           CI: true
         if: success()
         run: npx semantic-release
+      # Rebuild for Pages, which deploys even when there's nothing to release
       - name: Build
         if: success()
         run: npm run build

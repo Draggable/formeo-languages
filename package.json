@@ -66,6 +66,7 @@
     "@commitlint/config-conventional": "^21.0.1",
     "@google-cloud/translate": "^9.3.0",
     "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "7.1.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "13.1.5",
     "dotenv": "^16.4.5",
@@ -80,12 +81,20 @@
     "vite-plugin-static-copy": "^4.0.1"
   },
   "release": {
-    "branch": "master",
+    "branches": [
+      "master"
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
       "@semantic-release/npm",
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "npm run build"
+        }
+      ],
       [
         "@semantic-release/github",
         {
