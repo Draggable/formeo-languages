@@ -1,3 +1,10 @@
+# [3.11.0](https://github.com/Draggable/formeo-languages/compare/v3.10.2...v3.11.0) (2026-10-06)
+
+
+### Features
+
+* table repeating rows and input group keys ([86b5e9e](https://github.com/Draggable/formeo-languages/commit/86b5e9edf7c9797622f71966cfd57ed6993cb70e)), closes [Draggable/formeo#349](https://github.com/Draggable/formeo/issues/349)
+
 ## [3.10.2](https://github.com/Draggable/formeo-languages/compare/v3.10.1...v3.10.2) (2026-10-06)
 
 

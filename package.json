@@ -1,6 +1,6 @@
 {
   "name": "@draggable/formeo-languages",
-  "version": "3.10.2",
+  "version": "3.11.0",
   "description": "Language files for Formeo",
   "main": "dist/formeo-languages.cjs.js",
   "module": "dist/formeo-languages.es.js",
