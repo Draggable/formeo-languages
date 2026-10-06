@@ -1,3 +1,18 @@
+# [3.10.0](https://github.com/Draggable/formeo-languages/compare/v3.9.0...v3.10.0) (2026-10-06)
+
+
+### Bug Fixes
+
+* correct label position translations ([43aa70b](https://github.com/Draggable/formeo-languages/commit/43aa70b04ab3de3f5dda4c528215454a732af51f)), closes [Draggable/formeo#243](https://github.com/Draggable/formeo/issues/243)
+* hi-IN cell input comma and pl-PL matrix term ([cf28836](https://github.com/Draggable/formeo-languages/commit/cf28836ba813772734433888bf3474a6c00fe4e5)), closes [Draggable/formeo#349](https://github.com/Draggable/formeo/issues/349)
+
+
+### Features
+
+* label position keys ([e8d94f8](https://github.com/Draggable/formeo-languages/commit/e8d94f8e99fde2a70e6ce2fab72cb85a3971a0a1)), closes [Draggable/formeo#243](https://github.com/Draggable/formeo/issues/243)
+* table element keys ([2acffa4](https://github.com/Draggable/formeo-languages/commit/2acffa4c2b7852c9df736998794da681de2501d5)), closes [Draggable/formeo#349](https://github.com/Draggable/formeo/issues/349)
+* table matrix keys ([0fee57f](https://github.com/Draggable/formeo-languages/commit/0fee57f0c873a8a01b55b01b537a4896853ad5db)), closes [Draggable/formeo#349](https://github.com/Draggable/formeo/issues/349)
+
 # [3.9.0](https://github.com/Draggable/formeo-languages/compare/v3.8.0...v3.9.0) (2026-09-30)
 
 
