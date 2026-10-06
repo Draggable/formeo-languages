@@ -22,6 +22,7 @@
   },
   "scripts": {
     "generate:index": "node tools/generate-index.js",
+    "predev": "npm run generate:index",
     "dev": "vite --config vite.config.dev.mjs",
     "build:lib": "vite build --config vite.config.lib.mjs",
     "watch:lib": "vite build --config vite.config.lib.mjs --watch",
@@ -30,6 +31,7 @@
     "build": "vite build --config vite.config.dev.mjs",
     "prebuild": "npm run build:lib",
     "semantic-release": "semantic-release --ci --debug",
+    "pretest": "npm run generate:index",
     "test": "node --test src/js/*.test.js tools/*.test.js",
     "translate": "node tools/translate.js",
     "pretranslate": "npm run build:lib",
@@ -79,14 +81,21 @@
   },
   "release": {
     "branch": "master",
-    "verifyConditions": [
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
       "@semantic-release/npm",
-      "@semantic-release/git"
-    ],
-    "prepare": [
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "dist/lang/**/*.json"
+            }
+          ]
+        }
+      ],
       "@semantic-release/git"
     ]
   },

@@ -16,7 +16,7 @@ Many of the current translations are machine-generated, so improvements from nat
 2. Run `npm test` to check your changes.
 3. Open a pull request.
 
-You don't need to rebuild anything. `src/js/index.js` and the `src/lang/*.json` files are generated and get rebuilt when the package is released.
+You don't need to rebuild anything. `src/js/index.js` and the `src/lang/*.json` files are generated from the `.lang` files and aren't committed. `npm test`, `npm run dev` and the build all regenerate them, and the release ships them in the npm package, on GitHub Pages and as GitHub release assets.
 
 ### Placeholders
 
