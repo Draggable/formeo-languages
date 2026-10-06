@@ -22,14 +22,17 @@
   },
   "scripts": {
     "generate:index": "node tools/generate-index.js",
+    "predev": "npm run generate:index",
     "dev": "vite --config vite.config.dev.mjs",
     "build:lib": "vite build --config vite.config.lib.mjs",
+    "prewatch:lib": "npm run generate:index",
     "watch:lib": "vite build --config vite.config.lib.mjs --watch",
     "dev:all": "run-s build:lib dev",
     "prebuild:lib": "npm run generate:index",
     "build": "vite build --config vite.config.dev.mjs",
     "prebuild": "npm run build:lib",
     "semantic-release": "semantic-release --ci --debug",
+    "pretest": "npm run generate:index",
     "test": "node --test src/js/*.test.js tools/*.test.js",
     "translate": "node tools/translate.js",
     "pretranslate": "npm run build:lib",
@@ -64,6 +67,7 @@
     "@commitlint/config-conventional": "^21.0.1",
     "@google-cloud/translate": "^9.3.0",
     "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "7.1.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "13.1.5",
     "dotenv": "^16.4.5",
@@ -78,15 +82,30 @@
     "vite-plugin-static-copy": "^4.0.1"
   },
   "release": {
-    "branch": "master",
-    "verifyConditions": [
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      "@semantic-release/git"
+    "branches": [
+      "master"
     ],
-    "prepare": [
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
       "@semantic-release/npm",
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "npm run build"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "dist/lang/**/*.json"
+            }
+          ]
+        }
+      ],
       "@semantic-release/git"
     ]
   },
