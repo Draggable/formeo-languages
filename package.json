@@ -25,6 +25,7 @@
     "predev": "npm run generate:index",
     "dev": "vite --config vite.config.dev.mjs",
     "build:lib": "vite build --config vite.config.lib.mjs",
+    "prewatch:lib": "npm run generate:index",
     "watch:lib": "vite build --config vite.config.lib.mjs --watch",
     "dev:all": "run-s build:lib dev",
     "prebuild:lib": "npm run generate:index",
