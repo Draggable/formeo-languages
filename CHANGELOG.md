@@ -1,3 +1,10 @@
+## [3.10.2](https://github.com/Draggable/formeo-languages/compare/v3.10.1...v3.10.2) (2026-10-06)
+
+
+### Bug Fixes
+
+* **release:** build after the version bump so the bundle banner is current ([a118115](https://github.com/Draggable/formeo-languages/commit/a118115e5cde62d4f78a4db144e1aabca99f1441))
+
 ## [3.10.1](https://github.com/Draggable/formeo-languages/compare/v3.10.0...v3.10.1) (2026-10-06)
 
 
