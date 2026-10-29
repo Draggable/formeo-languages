@@ -1,3 +1,10 @@
+## [3.11.2](https://github.com/Draggable/formeo-languages/compare/v3.11.1...v3.11.2) (2026-10-29)
+
+
+### Bug Fixes
+
+* **deps:** update @draggable/i18n to 1.2.0 ([#101](https://github.com/Draggable/formeo-languages/issues/101)) ([5230491](https://github.com/Draggable/formeo-languages/commit/5230491304d6b550220842e9c1c0168305e4b65b))
+
 ## [3.11.1](https://github.com/Draggable/formeo-languages/compare/v3.11.0...v3.11.1) (2026-10-29)
 
 
