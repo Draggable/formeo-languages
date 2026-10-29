@@ -1,3 +1,10 @@
+## [3.11.1](https://github.com/Draggable/formeo-languages/compare/v3.11.0...v3.11.1) (2026-10-29)
+
+
+### Bug Fixes
+
+* normalize repository url in package.json ([#100](https://github.com/Draggable/formeo-languages/issues/100)) ([eeffdd4](https://github.com/Draggable/formeo-languages/commit/eeffdd4481963ed8b2472c3110d52b66eb4e9bb3))
+
 # [3.11.0](https://github.com/Draggable/formeo-languages/compare/v3.10.2...v3.11.0) (2026-10-06)
 
 
