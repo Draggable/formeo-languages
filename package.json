@@ -134,7 +134,7 @@
     }
   },
   "dependencies": {
-    "@draggable/i18n": "1.2.0"
+    "@draggable/i18n": "1.2.1"
   },
   "devEngines": {
     "runtime": {
