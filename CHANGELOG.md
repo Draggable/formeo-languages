@@ -1,3 +1,10 @@
+## [3.11.3](https://github.com/Draggable/formeo-languages/compare/v3.11.2...v3.11.3) (2026-11-06)
+
+
+### Bug Fixes
+
+* **deps:** bump nested npm to 11.21.2 and translate to 10 ([#104](https://github.com/Draggable/formeo-languages/issues/104)) ([88bdddd](https://github.com/Draggable/formeo-languages/commit/88bdddd11bf0228e642945c9dc5cc68dad23bb8e))
+
 ## [3.11.2](https://github.com/Draggable/formeo-languages/compare/v3.11.1...v3.11.2) (2026-10-29)
 
 
